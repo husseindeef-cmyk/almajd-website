@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>المجد للتوريدات العمومية</title>
+  <meta name="description" content="المجد للتوريدات العمومية - أدوات مكتبية، مستلزمات طباعة، توريدات شركات.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    /* Basic reset */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Naskh Arabic UI", "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+      line-height: 1.6;
+      background: #f8f8fb;
+      color: #1f1f1f;
+    }
+    a { text-decoration: none; color: inherit; }
+    .container { width: min(1100px, 92%); margin-inline: auto; }
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: #ffffffd9; backdrop-filter: saturate(180%) blur(12px);
+      border-bottom: 1px solid #eee;
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 0;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: .3px;
+    }
+    .brand-badge { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg,#ffd54f,#ff7043); display: grid; place-items: center; font-weight: 900; }
+    nav ul { list-style: none; display: flex; gap: 18px; padding: 0; margin: 0; }
+    nav a { padding: 8px 12px; border-radius: 10px; }
+    nav a:hover { background: #f1f1f7; }
+    .hero {
+      padding: 60px 0 40px; position: relative; overflow: hidden;
+      background: radial-gradient(1200px 450px at 50% -10%, #fff 25%, #f3f6ff 60%, transparent 60%), #f8f8fb;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items: center; }
+    .hero h1 { font-size: clamp(26px, 3.8vw, 42px); margin: 0 0 12px; }
+    .hero p { font-size: clamp(15px, 1.4vw, 18px); color: #555; margin: 0 0 18px; }
+    .cta { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 16px; border-radius: 12px; border: 1px solid #e6e6ea;
+      background: #fff; font-weight: 600; cursor: pointer;
+    }
+    .btn.primary { background: linear-gradient(135deg,#ffd54f,#ff7043); border: none; color: #261b00; }
+    .pill { padding: 6px 10px; border-radius: 999px; border: 1px dashed #e4e4ea; background: #fff; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: #444; }
+    .illus {
+      aspect-ratio: 4/3; border-radius: 18px; border: 1px solid #eee; background: #fff;
+      display: grid; place-items: center; padding: 22px;
+      box-shadow: 0 8px 18px rgba(0,0,0,.04);
+    }
+    .illus-inner {
+      width: 100%; height: 100%; border-radius: 12px; border: 2px dashed #ffe082;
+      display: grid; place-items: center; padding: 12px; text-align: center; color:#6b5b00; font-weight: 700;
+      background:
+        linear-gradient(135deg, rgba(255,235,59,.25), transparent 60%),
+        repeating-linear-gradient(90deg, transparent 0 12px, rgba(255,193,7,.08) 12px 13px);
+    }
+    section { padding: 40px 0; }
+    .section-title { font-size: 24px; margin: 0 0 8px; }
+    .muted { color: #666; margin: 0 0 24px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit,minmax(230px,1fr)); gap: 16px; }
+    .card {
+      background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 16px;
+      box-shadow: 0 6px 14px rgba(0,0,0,.03);
+    }
+    .card h3 { margin: 0 0 6px; font-size: 18px; }
+    .badge { font-size: 12px; padding: 4px 8px; border-radius: 999px; background: #f6f6fb; border: 1px solid #eee; display: inline-block; }
+    .products { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 12px; }
+    .product { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 12px; }
+    .product .img {
+      aspect-ratio: 4/3; border-radius: 10px; background: linear-gradient(135deg,#fef3c7,#ffe0b2);
+      border: 1px dashed #ffcc80; display: grid; place-items: center; color: #6b5b00; font-weight: 700;
+    }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .contact {
+      background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 16px;
+    }
+    footer { padding: 30px 0; color: #666; }
+    .footer-grid { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; }
+    .socials { display: flex; gap: 10px; }
+    .socials a { padding: 8px 12px; border: 1px solid #eee; border-radius: 10px; background: #fff; }
+    /* Responsive */
+    @media (max-width: 860px) {
+      .hero-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-badge">م</div>
+        <span>المجد للتوريدات العمومية</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#services">الخدمات</a></li>
+          <li><a href="#products">المنتجات</a></li>
+          <li><a href="#about">من نحن</a></li>
+          <li><a href="#contact">تواصل</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="pill">متخصصون في الأدوات المكتبية وتوريدات الشركات</span>
+        <h1>كل ما يحتاجه مكتبك — بجودة عالية وأسعار تنافسية</h1>
+        <p>توريد أدوات مكتبية، أحبار وطباعة، مستلزمات أرشفة وتغليف، مع توصيل سريع ودعم عبر واتساب.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://wa.me/201092102061?text=مرحباً%20أريد%20الاستفسار%20عن%20عروض%20المجد" target="_blank" rel="noopener">تواصل واتساب</a>
+          <a class="btn" href="#products">تصفح المنتجات</a>
+        </div>
+      </div>
+      <div class="illus">
+        <div class="illus-inner"><img src="logo.jpg" alt="شعار المجد" style="max-width:100%;max-height:100%;"></div>
+      </div>
+    </div>
+  </main>
+
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">خدماتنا</h2>
+      <p class="muted">حلول متكاملة لتجهيز مكتبك وإدارة المشتريات.</p>
+      <div class="cards">
+        <div class="card">
+          <span class="badge">توريدات مكتبية</span>
+          <h3>أدوات مكتبية كاملة</h3>
+          <p>أقلام، أوراق، ملفات، دفاتر، منظّمات، مشابك، وأكثر.</p>
+        </div>
+        <div class="card">
+          <span class="badge">طباعة وأحبار</span>
+          <h3>أحبار وطابعات</h3>
+          <p>أحبار أصلية ومتوافقة، ورق تصوير، وصيانة خفيفة للطابعات.</p>
+        </div>
+        <div class="card">
+          <span class="badge">أرشفة وتغليف</span>
+          <h3>ملفات وأغلفة</h3>
+          <p>مجلدات، دوسيهات، حافظات حرارية، أكياس تغليف ومستلزمات الشحن.</p>
+        </div>
+        <div class="card">
+          <span class="badge">عقود توريد</span>
+          <h3>توريد للشركات</h3>
+          <p>عقود توريد مرنة مع خصومات للطلبات بالجملة وخدمات التوصيل.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <div class="container">
+      <h2 class="section-title">منتجات مختارة</h2>
+      <p class="muted">عينات يمكنك تعديلها لاحقًا بالقائمة الكاملة.</p>
+      <div class="products">
+        <div class="product">
+          <div class="img">ورق تصوير A4</div>
+          <p>ورق تصوير 80 جم — عبوة 5 رزم.</p>
+        </div>
+        <div class="product">
+          <div class="img">أقلام حبر</div>
+          <p>علبة 50 قلم أزرق/أسود.</p>
+        </div>
+        <div class="product">
+          <div class="img">أحبار طابعات</div>
+          <p>أحبار أصلية ومتوافقة لموديلات متعددة.</p>
+        </div>
+        <div class="product">
+          <div class="img">مجلدات</div>
+          <p>مجلدات ملفات بألوان متعددة للأرشفة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">من نحن</h2>
+      <p class="muted">المجد للتوريدات العمومية — خبرة في تجهيز المكاتب وتوريد المستلزمات مع خدمة عملاء سريعة وموثوقة.</p>
+      <div class="grid-2">
+        <div class="card">
+          <h3>رؤيتنا</h3>
+          <p>توفير حلول عملية وبأسعار مناسبة لكل الشركات والمؤسسات.</p>
+        </div>
+        <div class="card">
+          <h3>لماذا نحن؟</h3>
+          <ul>
+            <li>خدمة سريعة ومرنة</li>
+            <li>أسعار تنافسية وجودة مضمونة</li>
+            <li>توصيل داخل المدينة وما حولها</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">تواصل معنا</h2>
+      <div class="grid-2">
+        <form class="contact" onsubmit="sendWhatsApp(event)">
+          <label>الاسم</label>
+          <input id="name" required style="width:100%;padding:10px;border:1px solid #e6e6ea;border-radius:10px;margin:6px 0 12px;">
+          <label>رقم الجوال</label>
+          <input id="phone" style="width:100%;padding:10px;border:1px solid #e6e6ea;border-radius:10px;margin:6px 0 12px;">
+          <label>الرسالة</label>
+          <textarea id="msg" required rows="4" style="width:100%;padding:10px;border:1px solid #e6e6ea;border-radius:10px;margin:6px 0 12px;"></textarea>
+          <button class="btn primary" type="submit">إرسال عبر واتساب</button>
+        </form>
+        <div class="card">
+          <p><strong>الهاتف:</strong> <a href="tel:+201000000000">+20 109 210 2061</a></p>
+          <p><strong>واتساب:</strong> <a href="https://wa.me/201092102061" target="_blank" rel="noopener">تواصل مباشر</a></p>
+          <p><strong>العنوان:</strong> الجمالية، القاهرة</p>
+          <div style="height:220px;border:1px solid #eee;border-radius:12px;overflow:hidden">
+            <!-- استبدل src بخريطة موقعك -->
+            <iframe title="map" src="about:blank" style="border:0;width:100%;height:100%"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>© <span id="year"></span> المجد للتوريدات العمومية. جميع الحقوق محفوظة.</div>
+      <div class="socials">
+        <a href="#" aria-label="Facebook">فيسبوك</a>
+        <a href="#" aria-label="Instagram">انستجرام</a>
+        <a href="#" aria-label="X">X</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function sendWhatsApp(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const msg = document.getElementById('msg').value.trim();
+      const businessNumber = '201092102061'; // ضع رقم الواتساب بدون +
+      const text = encodeURIComponent(`الاسم: ${name}%0Aالجوال: ${phone}%0Aالرسالة: ${msg}`);
+      window.open(`https://wa.me/${businessNumber}?text=${text}`, '_blank');
+    }
+  </script>
+</body>
+</html>
